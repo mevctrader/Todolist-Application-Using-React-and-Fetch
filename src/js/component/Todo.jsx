@@ -118,7 +118,7 @@ export const Todo = () => {
 			let response = await fetch(BURL, DEL_DELETE);
 			if (response.ok) {
 				setTasklist([]);
-                console.log("la lista entera se borro con exito")
+                console.log("la lista se borro con exito")
                 let createuser = await fetch(BURL , INI_POST)
             if(createuser.ok){
                 console.log("usuario iniciado con exito");
@@ -159,7 +159,7 @@ return (
         <div className='card-text border-dark mt-3'>
                     <div className="form-floating mb-3">
                         <input onChange={handlerTask} value={task} onKeyDown={handlerKeyPress} type="text" className="form-control" id="floatingInput" placeholder="Tarea por hacer"/>
-                        <label id="f1" htmlFor="floatingInput"> Agrega una Tarea</label>
+                        <label id="f1" htmlFor="floatingInput"> Agregar Tarea</label>
                     </div>
                     <div className="row text-muted">
 				        <h5>{mensaje2()}</h5>
